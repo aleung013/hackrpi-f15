@@ -1,7 +1,7 @@
 
 import com.leapmotion.leap.*;
 
-public class SampleListener extends Listener{
+public class SampleListener2 extends Listener{
 	
 	private GestureRecognizer gr = new GestureRecognizer('r');
 	
