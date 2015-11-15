@@ -21,24 +21,32 @@ public class Node {
 	
 	public String parse( ArrayList<String> data ){
 		String ret = "";
-		HashMap<String, Node> temp = children;
-		int i = 0;
-		for( ; i < data.size(); i++ ) {
-			if( word == data.get(i) ) {
-				// System.out.println( word );
-				ret += word;
-				break;
+		int words = 0;
+		for( int i = -1; i < data.size(); i++ ) {
+			String retTemp = "";
+			int wordsTemp = 0;
+			HashMap<String, Node> tempMap = children;
+			int j = 0;
+			for( ; j < data.size(); j++ ) {
+				if( word == data.get(j) && j != i) {
+					retTemp += word;
+					wordsTemp++;
+					break;
+				}
+			}
+			for( ; j < data.size(); j++ ) {
+				if( tempMap.containsKey( data.get(j) ) && j != i ) {
+					retTemp += " " + tempMap.get( data.get(j) ).word;
+					tempMap = tempMap.get( data.get(j) ).children;
+					wordsTemp++;
+				}
+			}
+			if( wordsTemp > words ) {
+				ret = retTemp;
+				words = wordsTemp;
 			}
 		}
-		for( ; i < data.size(); i++ ) {
-			// System.out.println(j);
-			if( temp.containsKey( data.get(i) ) ) {
-				// System.out.println( temp.get(j).word );
-				ret += " " + temp.get( data.get(i) ).word;
-				temp = temp.get( data.get(i) ).children;
-			}
-		}
-		return ret + ".";
+		return ret + ".";		
 	}
 	
 	public static void main(String[] args) {
