@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="C:/Users/JiaSen/Documents/GitHub/hackrpi-f15/MaryTTS/lib/marytts-lang-en-5.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/JiaSen/Documents/GitHub/hackrpi-f15/MaryTTS/lib/marytts-server-5.0-jar-with-dependencies.jar"/>
+	<classpathentry kind="lib" path="C:/Users/JiaSen/Documents/GitHub/hackrpi-f15/MaryTTS/lib/voice-cmu-slt-hsmm-5.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/JiaSen/Downloads/LeapSDK/lib/LeapJava.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="C:/Users/JiaSen/Downloads/LeapSDK/lib/x64"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
